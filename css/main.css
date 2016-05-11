@@ -1,0 +1,370 @@
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+h1 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.3em;
+  margin-top: 0.6em;
+  -webkit-margin-before: 0em;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 400;
+  color: white;
+}
+
+body button {
+  background-color: #FA054B;
+  color: white;
+  border-radius: 4px;
+  padding: 10px 20px;
+  border-style: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1em;
+  margin-top: 2em;
+}
+
+section p {
+  font-weight: 400;
+  font-size: 1em;
+  text-transform: uppercase;
+  line-height: 1.2em;
+  margin: 0;
+}
+
+
+/*Navigation*/
+.nav-wrapper {
+  background-color: white;
+}
+
+.nav-wrapper a {
+  color: #FA054B;
+}
+
+.side-nav {
+  background: #FA054B;
+  color: #fff;
+}
+
+.side-nav a {
+  color: #fff;
+}
+
+
+
+/*Entire Section(all 6)*/
+section {
+  height: 100vh;
+  min-height: 50rem;
+  padding: 0 10%;
+}
+
+
+/*Section Networking(2), Productivity(4), Portfolio(6) */
+section.graphic h1 {
+  font-size: 3.5em;
+  color: #636363;
+}
+
+section.graphic p {
+  font-size: 1.1em;
+  letter-spacing: 0.04em;
+  color: #636363;
+
+}
+
+.even-p span {
+  display: block;
+  margin-bottom: 0.3em;
+}
+
+
+/* Section Flexbility(3), Contract-free(5) */
+section.photo h1 {
+  font-size: 5em;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 0.15em;
+}
+
+section.photo p {
+  font-size: 1.5em;
+  color: white;
+}
+
+
+/* Section Sign-up(1) Only */
+.sign-up {
+  background-image: url('/images/hero-2048.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.sign-up img {
+  padding-top: 12rem;
+  height: 400px;
+}
+
+
+
+
+/* Section Networking(2) Only */
+.networking {
+  text-align: right;
+  padding-right: 10%;
+  background-image: url('/images/networking-2048.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right;
+}
+
+.networking p {
+  width: 40%;
+  float: right;
+}
+
+.networking button {
+  margin-top: 30rem;
+  margin-bottom: 1em;
+}
+
+
+/* Section Flexibility(3) Only */
+.flexibility {
+  background-image: url('/images/on-the-go-2048.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.flexibility h1 {
+  padding-top: 50vh;
+}
+
+
+/* Section Productivity(4) Only */
+.productivity {
+  background-image: url('/images/be-productive-2048.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.productivity h1 {
+  padding-top: 10vh;
+}
+
+.productivity p {
+  width: 30%;
+}
+
+
+/* Section Contract-free(5) Only */
+.contract-free {
+  background-image: url('/images/stand-out-2048.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.contract-free h1 {
+  padding-top: 45vh;
+}
+
+
+/* Section Portfolio(6) Only */
+.portfolio {
+  background-image: url('/images/your-lookbook-2048.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.portfolio h1 {
+  padding-top: 12rem;
+  width: 30%;
+}
+
+.portfolio p {
+  width: 30%;
+}
+
+/* Section Ready(7) Only*/
+.ready {
+  text-align: center;
+  margin: 7rem auto;
+}
+
+.ready h1 {
+  color: black;
+  font-size: 4.8em;
+}
+
+/*Footer*/
+.contact-info {
+  background-color: #DBDBDB;
+  padding: 1rem 10% 4rem 10%;
+}
+
+.contact-info h1{
+  font-size: 2em;
+}
+
+
+.in-touch {
+  float: left;
+  margin-left: 10%;
+  margin-top: 2rem;
+  text-transform: uppercase;
+}
+
+#subscribe{
+  background-color: #FA054B;
+  color: white;
+  border-radius: 1px;
+  padding: 5px 10px;
+  border-style: none;
+  margin-top: 0.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+
+.social {
+  margin-top: 7rem;
+  float: left;
+  text-align: center;
+}
+
+.social i {
+  background-color: white;
+  color: #DCDCDC;
+  height: 10vw;
+  width: 10vw;
+  font-size: 7vw;
+  border-radius: 50%;
+  line-height: 10vw;
+  margin: 0 0.125em 0 0.125em;
+}
+
+
+.other-info {
+  float: right;
+  margin-top: 2rem;
+  text-align: right;
+}
+
+.other-info ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.other-info li {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1em;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+  .content section {
+    min-height: initial;
+    text-align: center;
+  }
+
+  section.photo > h1 {
+    font-size: 4em;
+  }
+
+  .sign-up {
+    background-position: 75% 50%;
+  }
+
+  .networking {
+    background-position: center;
+    height: 60vh;
+  }
+
+  .networking-mobile {
+    padding: 2em 10% 2em 10%;
+    height: auto;
+  }
+
+  section.networking-mobile > h1 {
+    color: #555;
+    font-size: 3em;
+  }
+
+  section.networking-mobile p {
+    color: #555;
+    font-size: 1.2em;
+  }
+
+  .flexibility {
+    background-position: 95% 50%;
+  }
+
+  .flexibility h1 {
+    padding-top: 60vh;
+  }
+
+  .productivity {
+    background-size: 150%;
+    height: 60vh;
+  }
+
+  .productivity-mobile {
+    padding: 0 10% 2em 10%;
+    height: auto;
+    background: #ececec;
+  }
+
+  .contract-free {
+    background-size: 400%;
+    background-position: 66% 100%;
+  }
+
+  .contract-free > h1 {
+    padding-top: 75vh;
+  }
+
+  .portfolio {
+    height: 60vh;
+  }
+
+  .portfolio-mobile {
+    margin-top: -4em;
+    padding: 0 10% 2em 10%;
+    height: auto;
+    background: #ececec;
+  }
+
+  .ready h1 {
+    font-size: 3.6em;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+
+}
+
+@media only screen and (min-width: 993px) {
+
+}
+
