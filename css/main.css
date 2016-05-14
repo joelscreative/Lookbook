@@ -108,12 +108,23 @@ section.photo p {
   color: white;
 }
 
+.parallax-container {
+      height: 100vh;
+      width: 100%;
+    }
+
+/*.parallax-container img{
+  height:110%;
+
+}   */
+
+
 
 /* Section Sign-up(1) Only */
 .sign-up {
-  background-image: url('http://joelps.com/lookbook/images/hero-2048.jpg');
+  /*background-image: url('http://joelps.com/lookbook/images/hero-2048.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: center;*/
   text-align: center;
 }
 
@@ -122,7 +133,11 @@ section.photo p {
   height: 400px;
 }
 
-
+.parallax img {
+  height: 160%;
+  padding-top: 12rem;
+  top: -255px;
+}    
 
 
 /* Section Networking(2) Only */
