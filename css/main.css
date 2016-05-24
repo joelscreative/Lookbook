@@ -109,16 +109,13 @@ section.photo p {
 }
 
 .parallax-container {
-      height: 100vh;
+      height: 160vh;
       width: 100%;
     }
 
 /*.parallax-container img{
   height:110%;
-
 }   */
-
-
 
 /* Section Sign-up(1) Only */
 .sign-up {
@@ -311,6 +308,17 @@ section.photo p {
     background-position: 75% 50%;
   }
 
+  .sign-up img {
+    padding-top: 10rem;
+    height: 340px;
+  }
+
+  .parallax img {
+    height: 160%;
+    padding-top: 12rem;
+    top: -255px;
+  }
+
   .networking {
     background-position: center;
     height: 60vh;
@@ -330,6 +338,15 @@ section.photo p {
     color: #555;
     font-size: 1.2em;
   }
+  
+  .parallax {
+    overflow: hidden;
+  }
+  
+  .parallax-container {
+      height: 100vh;
+      width: 100%;
+    }
 
   .flexibility {
     background-position: 95% 50%;
@@ -352,11 +369,11 @@ section.photo p {
 
   .contract-free {
     background-size: 400%;
-    background-position: 66% 100%;
+    background-position: 66% 200%;
   }
 
   .contract-free > h1 {
-    padding-top: 75vh;
+    padding-top: 65vh;
   }
 
   .portfolio {

@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link type="text/css" rel="stylesheet" href="http://joelps.com/lookbook/css/materialize.min.css" media="screen,projection">
   <link rel="stylesheet" href="http://joelps.com/lookbook/css/main.css">
+  <link rel="stylesheet" href="http://joelps.com/lookbook/css/animate.css">
 
 </head>
 <body>
@@ -19,9 +20,9 @@
   <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper">
-        <a href="#" class="right brand-logo">&gt;&lt;</a>
+        <!-- <a href="#" class="right brand-logo">&gt;&lt;</a> -->
 
-        <a href="#" data-activates="side-nav" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+        <a href="#" id="nav-toggle" data-activates="side-nav" class="button-collapse show-on-large"><span></span><!-- <i class="material-icons">menu</i> --></a>
 
 
         <ul class="side-nav" id="side-nav">
@@ -47,8 +48,8 @@
    </section>
     <section class="graphic networking">
       <div class="hide-on-small-and-down">
-        <button class="find-out-more">Find out more</button>
-        <h1>Industry networking</h1>
+        <button class="find-out-more animatable bounceIn">Find out more</button>
+        <h1 class="animatable fadeInUp">Industry networking</h1>
         <p>
           Invite and connect with models, clients,
           creatives, photographers and friends
@@ -57,74 +58,74 @@
     </section>
 
     <section class="networking-mobile hide-on-med-and-up">
-      <h1>Industry networking</h1>
+      <h1 class="animatable fadeInUp">Industry networking</h1>
       <p>
         Invite and connect with models, clients,
         creatives, photographers and friends
       </p>
-      <button class="find-out-more">Find out more</button>
+      <button class="find-out-more animatable bounceIn">Find out more</button>
     </section>
 
     <section class="photo flexibility">
-      <h1>On the go</h1>
+      <h1 class="animatable fadeInUp">On the go</h1>
       <p>Your schedule when you want it</p>
     </section>
 
     <section class="graphic productivity">
       <div class="hide-on-small-and-down">
-        <h1>Be Productive</h1>
+        <h1 class="animatable fadeInUp">Be Productive</h1>
         <p>
           Lookbook gives you the tools to
           manage your career, bookings,
           schedules, castings and more
         </p>
-        <button class="more-info">Find out more</button>
+        <button class="more-info animatable bounceIn">Find out more</button>
       </div>
     </section>
 
     <section class="productivity-mobile hide-on-med-and-up">
-      <h1>Lookbook</h1>
+      <h1 class="animatable fadeInUp">Lookbook</h1>
       <p>
         Gives you the tools to
         manage your career, bookings,
         schedules, castings and more
       </p>
-      <button class="more-info">Find out more</button>
+      <button class="more-info animatable bounceIn">Find out more</button>
     </section>
 
     <section class="photo contract-free">
-      <h1>Stand Out</h1>
+      <h1 class="animatable fadeInUp">Stand Out</h1>
       <p>Be free of contracts</p>
     </section>
 
     <section class="graphic portfolio">
       <div class="hide-on-small-and-down">
-        <h1>Your Lookbook</h1>
+        <h1 class="animatable fadeInUp">Your Lookbook</h1>
         <p>
           Create, update and edit your
           portfolio and comp cards
         </p>
-        <button class="more-info">Find out more</button>
+        <button class="more-info animatable bounceIn">Find out more</button>
       </div>
     </section>
 
     <section class="portfolio-mobile hide-on-med-and-up">
-      <h1>Your Lookbook</h1>
+      <h1 class="animatable fadeInUp">Your Lookbook</h1>
       <p>
         Create, update and edit your
         portfolio and comp cards
       </p>
-      <button class="more-info">Find out more</button>
+      <button class="more-info animatable bounceIn">Find out more</button>
     </section>
 
     <div class="ready">
-      <h1>Ready to try?</h1>
-      <button class="more-info">Yes I'm ready</button>
+      <h1 class="animatable fadeInUp">Ready to try?</h1>
+      <button class="more-info animatable bounceIn">Yes I'm ready</button>
     </div>
 
     <footer class="contact-info row">
       <div class="in-touch col s12 m3 l3">
-        <h1>Stay in Touch</h1>
+        <h1 class="animatable fadeInUp">Stay in Touch</h1>
         <form>
           <span>Name</span><br>
           <input type="text" name="userName" id="userName" class="text" autocomplete="off" required/><br>
@@ -160,5 +161,45 @@
       $('.parallax').parallax();
     });
   </script>
+  <!-- ANIMATIONS -->
+  <script>
+    jQuery(function($) {
+  
+  // Function which adds the 'animated' class to any '.animatable' in view
+  var doAnimations = function() {
+    
+    // Calc current offset and get all animatables
+    var offset = $(window).scrollTop() + $(window).height(),
+        $animatables = $('.animatable');
+    
+    // Unbind scroll handler if we have no animatables
+    if ($animatables.size() == 0) {
+      $(window).off('scroll', doAnimations);
+    }
+    
+    // Check all animatables and animate them if necessary
+    $animatables.each(function(i) {
+       var $animatable = $(this);
+      if (($animatable.offset().top + $animatable.height() - 20) < offset) {
+        $animatable.removeClass('animatable').addClass('animated');
+      }
+    });
+
+  };
+  
+  // Hook doAnimations on scroll, and trigger a scroll
+  $(window).on('scroll', doAnimations);
+  $(window).trigger('scroll');
+
+});
+  </script>
+<!-- navtoggle -->
+<script>
+document.querySelector( "#nav-toggle" )
+  .addEventListener( "click", function() {
+    this.classList.toggle( "active" );
+  });
+  </script>
+
 </body>
 </html>
